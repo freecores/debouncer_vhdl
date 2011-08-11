@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/Dropbox/VHDL_training/ISE_projects/debounce_vhdl_bench/testbench_isim_translate.exe" -prj "D:/Dropbox/VHDL_training/ISE_projects/debounce_vhdl_bench/testbench_translate.prj" "work.testbench" 
