@@ -206,7 +206,7 @@
 # NET "AUDRST"   LOC = "T17"; # Bank = 1, Pin name = IO_L51P_M1DQ12,      Sch name = AUD-RESET
  
 # PMOD Connector
-# NET "m_state_o<0>"     LOC = "T3"; # Bank = 2,  Pin name = IO_L62N_D6,     PMOD JB<1>,  Sch name = JA-D0_N
+ NET "strb_o"           LOC = "T3"; # Bank = 2,  Pin name = IO_L62N_D6,     PMOD JB<1>,  Sch name = JA-D0_N
 # NET "m_state_o<1>"     LOC = "R3"; # Bank = 2,  Pin name = IO_L62P_D5,     PMOD JB<2>,  Sch name = JA-D0_P
 # NET "m_state_o<2>"     LOC = "P6"; # Bank = 2,  Pin name = IO_L64N_D9,     PMOD JB<3>,  Sch name = JA-D2_N
 # NET "m_state_o<3>"     LOC = "N5"; # Bank = 2,  Pin name = IO_L64P_D8,     PMOD JB<4>,  Sch name = JA-D2_P

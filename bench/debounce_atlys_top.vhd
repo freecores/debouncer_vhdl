@@ -4,14 +4,14 @@
 -- Create Date:     01:21:32 06/30/2011 
 -- Design Name: 
 -- Module Name:     debounce_atlys_top
--- Project Name:    spi_master_slave
+-- Project Name:    debounce_vhdl
 -- Target Devices:  Spartan-6 LX45
 -- Tool versions:   ISE 13.1
 -- Description: 
---          This is a verification project for the Digilent Atlys board, to test the SPI_MASTER, SPI_SLAVE and GRP_DEBOUNCE cores.
+--          This is a verification project for the Digilent Atlys board, to test the GRP_DEBOUNCE core.
 --          It uses the board's 100MHz clock input, and clocks all sequential logic at this clock.
 --
---          See the "spi_master_atlys.ucf" file for pin assignments.
+--          See the "debounce_atlys.ucf" file for pin assignments.
 --          The test circuit uses the VHDCI connector on the Atlys to implement a 16-pin debug port to be used
 --          with a Tektronix MSO2014. The 16 debug pins are brought to 2 8x2 headers that form a umbilical
 --          digital pod port.
@@ -29,6 +29,7 @@
 --                                  6.25MHz, 1MHz and 500kHz 
 -- 2011/07/29   v1.12.0105  [JD]    spi_master.vhd and spi_slave_vhd changed to fix CPHA='1' bug.
 -- 2011/08/02   v1.13.0110  [JD]    testbed for continuous transfer in FPGA hardware.
+-- 2011/08/10   v1.01.0025  [JD]    changed to test the grp_debouncer.vhd module alone.
 --
 --
 ----------------------------------------------------------------------------------
