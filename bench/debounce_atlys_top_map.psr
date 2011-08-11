@@ -1,0 +1,151 @@
+Release 13.1 Physical Synthesis Report O.40d (nt)
+Copyright (c) 1995-2011 Xilinx, Inc. All rights reserved.
+
+TABLE OF CONTENTS
+  1) Physical Synthesis Options Summary
+  2) Optimizations statistics and details
+
+
+=========================================================================
+*                 Physical Synthesis Options Summary                    *
+=========================================================================
+---- Options
+Global Optimization                 : ON
+    Retiming                        : OFF
+    Equivalent Register Removal     : ON
+Timing-Driven Packing and Placement : ON
+    Logic Optimization              : OFF
+    Register Duplication            : OFF
+
+---- Intelligent clock gating       : OFF
+
+---- Target Parameters
+Target Device                       : 6slx45csg324-2
+
+=========================================================================
+
+
+=========================================================================
+*                        Optimizations                                  *
+=========================================================================
+---- Statistics
+   Number of LUTs removed by SmartOpt Trimming               | 105             
+
+   Overall change in number of design objects                |  -105            
+
+
+---- Details
+
+
+
+Removed components                                     | Optimization             
+-------------------------------------------------------|--------------------------
+][103_12                                               | SmartOpt Trimming        
+][25_0                                                 | SmartOpt Trimming        
+][29_1                                                 | SmartOpt Trimming        
+][33_2                                                 | SmartOpt Trimming        
+][40_3                                                 | SmartOpt Trimming        
+][47_4                                                 | SmartOpt Trimming        
+][54_5                                                 | SmartOpt Trimming        
+][61_6                                                 | SmartOpt Trimming        
+][68_7                                                 | SmartOpt Trimming        
+][75_8                                                 | SmartOpt Trimming        
+][82_9                                                 | SmartOpt Trimming        
+][89_10                                                | SmartOpt Trimming        
+][96_11                                                | SmartOpt Trimming        
+][const_100_109                                        | SmartOpt Trimming        
+][const_101_110                                        | SmartOpt Trimming        
+][const_103_112                                        | SmartOpt Trimming        
+][const_104_113                                        | SmartOpt Trimming        
+][const_106_115                                        | SmartOpt Trimming        
+][const_107_116                                        | SmartOpt Trimming        
+][const_109_118                                        | SmartOpt Trimming        
+][const_10_15                                          | SmartOpt Trimming        
+][const_110_119                                        | SmartOpt Trimming        
+][const_112_121                                        | SmartOpt Trimming        
+][const_113_122                                        | SmartOpt Trimming        
+][const_115_124                                        | SmartOpt Trimming        
+][const_116_125                                        | SmartOpt Trimming        
+][const_118_127                                        | SmartOpt Trimming        
+][const_119_128                                        | SmartOpt Trimming        
+][const_11_16                                          | SmartOpt Trimming        
+][const_121_130                                        | SmartOpt Trimming        
+][const_122_131                                        | SmartOpt Trimming        
+][const_124_133                                        | SmartOpt Trimming        
+][const_125_134                                        | SmartOpt Trimming        
+][const_127_136                                        | SmartOpt Trimming        
+][const_128_137                                        | SmartOpt Trimming        
+][const_12_17                                          | SmartOpt Trimming        
+][const_13_18                                          | SmartOpt Trimming        
+][const_14_19                                          | SmartOpt Trimming        
+][const_15_20                                          | SmartOpt Trimming        
+][const_16_21                                          | SmartOpt Trimming        
+][const_17_22                                          | SmartOpt Trimming        
+][const_18_23                                          | SmartOpt Trimming        
+][const_19_24                                          | SmartOpt Trimming        
+][const_20_25                                          | SmartOpt Trimming        
+][const_21_26                                          | SmartOpt Trimming        
+][const_22_27                                          | SmartOpt Trimming        
+][const_23_28                                          | SmartOpt Trimming        
+][const_24_31                                          | SmartOpt Trimming        
+][const_25_32                                          | SmartOpt Trimming        
+][const_26_35                                          | SmartOpt Trimming        
+][const_27_36                                          | SmartOpt Trimming        
+][const_28_38                                          | SmartOpt Trimming        
+][const_29_39                                          | SmartOpt Trimming        
+][const_30_41                                          | SmartOpt Trimming        
+][const_31_42                                          | SmartOpt Trimming        
+][const_32_44                                          | SmartOpt Trimming        
+][const_33_45                                          | SmartOpt Trimming        
+][const_34_47                                          | SmartOpt Trimming        
+][const_35_48                                          | SmartOpt Trimming        
+][const_36_50                                          | SmartOpt Trimming        
+][const_37_51                                          | SmartOpt Trimming        
+][const_38_53                                          | SmartOpt Trimming        
+][const_39_54                                          | SmartOpt Trimming        
+][const_40_55                                          | SmartOpt Trimming        
+][const_41_56                                          | SmartOpt Trimming        
+][const_43_57                                          | SmartOpt Trimming        
+][const_44_58                                          | SmartOpt Trimming        
+][const_46_59                                          | SmartOpt Trimming        
+][const_47_60                                          | SmartOpt Trimming        
+][const_49_61                                          | SmartOpt Trimming        
+][const_50_62                                          | SmartOpt Trimming        
+][const_52_63                                          | SmartOpt Trimming        
+][const_53_64                                          | SmartOpt Trimming        
+][const_55_65                                          | SmartOpt Trimming        
+][const_56_66                                          | SmartOpt Trimming        
+][const_58_67                                          | SmartOpt Trimming        
+][const_59_68                                          | SmartOpt Trimming        
+][const_61_69                                          | SmartOpt Trimming        
+][const_62_70                                          | SmartOpt Trimming        
+][const_64_75                                          | SmartOpt Trimming        
+][const_65_76                                          | SmartOpt Trimming        
+][const_67_77                                          | SmartOpt Trimming        
+][const_68_78                                          | SmartOpt Trimming        
+][const_70_79                                          | SmartOpt Trimming        
+][const_71_80                                          | SmartOpt Trimming        
+][const_73_81                                          | SmartOpt Trimming        
+][const_74_82                                          | SmartOpt Trimming        
+][const_76_83                                          | SmartOpt Trimming        
+][const_77_84                                          | SmartOpt Trimming        
+][const_79_85                                          | SmartOpt Trimming        
+][const_80_86                                          | SmartOpt Trimming        
+][const_82_87                                          | SmartOpt Trimming        
+][const_83_88                                          | SmartOpt Trimming        
+][const_85_89                                          | SmartOpt Trimming        
+][const_86_90                                          | SmartOpt Trimming        
+][const_88_91                                          | SmartOpt Trimming        
+][const_89_92                                          | SmartOpt Trimming        
+][const_8_13                                           | SmartOpt Trimming        
+][const_91_100                                         | SmartOpt Trimming        
+][const_92_101                                         | SmartOpt Trimming        
+][const_94_103                                         | SmartOpt Trimming        
+][const_95_104                                         | SmartOpt Trimming        
+][const_97_106                                         | SmartOpt Trimming        
+][const_98_107                                         | SmartOpt Trimming        
+][const_9_14                                           | SmartOpt Trimming        
+
+
+   Flops added for Enable Generation                       
+-------------------------

@@ -57,7 +57,7 @@ architecture rtl of debounce_atlys_top is
     --=============================================================================================
     -- debounce generics
     constant N          : integer   := 8;           -- 8 bits (8 switch inputs)
-    constant CNT_VAL    : integer   := 1000;        -- debounce period = 1000 * 10 ns (10 us)
+    constant CNT_VAL    : integer   := 5000;        -- debounce period = 1000 * 10 ns (50 us)
     
     --=============================================================================================
     -- Signals for internal operation
@@ -105,8 +105,8 @@ begin
     leds_reg_proc: leds_reg <= sw_reg;          -- leds register is a copy of the updated switch register
 
     -- update debug register
-    dbg_lo_proc: dbg(7 downto 0) <= sw_i;       -- lower debug port has debounced switch data
-    dbg_hi_proc: dbg(15 downto 8) <= sw_data;   -- upper debug port has direct switch connections
+    dbg_lo_proc: dbg(7 downto 0) <= sw_i;       -- lower debug port has direct switch connections
+    dbg_hi_proc: dbg(15 downto 8) <= sw_data;   -- upper debug port has debounced switch data
     
 
     --=============================================================================================
