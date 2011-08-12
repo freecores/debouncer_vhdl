@@ -47,7 +47,7 @@
  NET "led_o<4>" LOC = "M13"; # Bank = 1, Pin name = IO_L61N,               Sch name = LD4
  NET "led_o<5>" LOC = "D4";  # Bank = 0, Pin name = IO_L1P_HSWAPEN_0,      Sch name = HSWAP/LD5
  NET "led_o<6>" LOC = "P16"; # Bank = 1, Pin name = IO_L74N_DOUT_BUSY_1,   Sch name = LD6
- NET "led_o<7>" LOC = "N12"; # Bank = 2, Pin name = IO_L13P_M1_2,          Sch name = M1/LD7
+# NET "led_o<7>" LOC = "N12"; # Bank = 2, Pin name = IO_L13P_M1_2,          Sch name = M1/LD7
  
 # onBoard PUSH BUTTONS 
 # NET "btn_i<0>" LOC = "T15";     # Bank = 2, Pin name = IO_L1N_M0_CMPMISO_2, Sch name = M0/RESET
@@ -65,7 +65,7 @@
  NET "sw_i<4>" LOC = "P12";   # Bank = 2, Pin name = IO_L13N_D10,           Sch name = SW4
  NET "sw_i<5>" LOC = "R5";    # Bank = 2, Pin name = IO_L48P_D7,            Sch name = SW5
  NET "sw_i<6>" LOC = "T5";    # Bank = 2, Pin name = IO_L48N_RDWR_B_VREF_2, Sch name = SW6
- NET "sw_i<7>" LOC = "E4";    # Bank = 3, Pin name = IO_L54P_M3RESET,       Sch name = SW7
+# NET "sw_i<7>" LOC = "E4";    # Bank = 3, Pin name = IO_L54P_M3RESET,       Sch name = SW7
 
 # TEMAC Ethernet MAC
 # NET "phyrst"    LOC = "G13"; # Bank = 1, Pin name = IO_L32N_A16_M1A9,         Sch name = E-RESET
@@ -206,7 +206,7 @@
 # NET "AUDRST"   LOC = "T17"; # Bank = 1, Pin name = IO_L51P_M1DQ12,      Sch name = AUD-RESET
  
 # PMOD Connector
- NET "strb_o"           LOC = "T3"; # Bank = 2,  Pin name = IO_L62N_D6,     PMOD JB<1>,  Sch name = JA-D0_N
+# NET "m_state_o<0>"     LOC = "T3"; # Bank = 2,  Pin name = IO_L62N_D6,     PMOD JB<1>,  Sch name = JA-D0_N
 # NET "m_state_o<1>"     LOC = "R3"; # Bank = 2,  Pin name = IO_L62P_D5,     PMOD JB<2>,  Sch name = JA-D0_P
 # NET "m_state_o<2>"     LOC = "P6"; # Bank = 2,  Pin name = IO_L64N_D9,     PMOD JB<3>,  Sch name = JA-D2_N
 # NET "m_state_o<3>"     LOC = "N5"; # Bank = 2,  Pin name = IO_L64P_D8,     PMOD JB<4>,  Sch name = JA-D2_P

@@ -30,6 +30,7 @@
 -- 2011/07/29   v1.12.0105  [JD]    spi_master.vhd and spi_slave_vhd changed to fix CPHA='1' bug.
 -- 2011/08/02   v1.13.0110  [JD]    testbed for continuous transfer in FPGA hardware.
 -- 2011/08/10   v1.01.0025  [JD]    changed to test the grp_debouncer.vhd module alone.
+-- 2011/08/11   v1.01.0026  [JD]    reduced switch inputs to 7, to save digital pins to the strobe signal.
 --
 --
 ----------------------------------------------------------------------------------
@@ -41,11 +42,10 @@ entity debounce_atlys_top is
     Port (
         gclk_i : in std_logic := 'X';                           -- board clock input 100MHz
         --- input slide switches ---            
-        sw_i : in std_logic_vector (7 downto 0);                -- 8 input slide switches
+        sw_i : in std_logic_vector (6 downto 0);                -- 7 input slide switches
         --- output LEDs ----            
-        led_o : out std_logic_vector (7 downto 0);              -- output leds
+        led_o : out std_logic_vector (6 downto 0);              -- 7 output leds
         --- debug outputs ---
-        strb_o : out std_logic;                                 -- core strobe output
         dbg_o : out std_logic_vector (15 downto 0)              -- 16 generic debug pins
     );                      
 end debounce_atlys_top;
@@ -56,18 +56,18 @@ architecture rtl of debounce_atlys_top is
     -- Constants
     --=============================================================================================
     -- debounce generics
-    constant N          : integer   := 8;           -- 8 bits (8 switch inputs)
+    constant N          : integer   := 7;           -- 7 bits (7 switch inputs)
     constant CNT_VAL    : integer   := 5000;        -- debounce period = 1000 * 10 ns (50 us)
     
     --=============================================================================================
     -- Signals for internal operation
     --=============================================================================================
     --- switch debouncer signals ---
-    signal sw_data          : std_logic_vector (7 downto 0) := (others => '0'); -- debounced switch data
-    signal sw_reg           : std_logic_vector (7 downto 0) := (others => '0'); -- registered switch data 
+    signal sw_data          : std_logic_vector (6 downto 0) := (others => '0'); -- debounced switch data
+    signal sw_reg           : std_logic_vector (6 downto 0) := (others => '0'); -- registered switch data 
     signal sw_new           : std_logic := '0';
     -- debug output signals
-    signal leds_reg         : std_logic_vector (7 downto 0) := (others => '0');
+    signal leds_reg         : std_logic_vector (6 downto 0) := (others => '0');
     signal dbg              : std_logic_vector (15 downto 0) := (others => '0');
 begin
 
@@ -105,8 +105,9 @@ begin
     leds_reg_proc: leds_reg <= sw_reg;          -- leds register is a copy of the updated switch register
 
     -- update debug register
-    dbg_lo_proc: dbg(7 downto 0) <= sw_i;       -- lower debug port has direct switch connections
-    dbg_hi_proc: dbg(15 downto 8) <= sw_data;   -- upper debug port has debounced switch data
+    dbg_in_proc:    dbg(6 downto 0) <= sw_i;        -- lower debug port has direct switch connections
+    dbg_out_proc:   dbg(13 downto 7) <= sw_data;    -- upper debug port has debounced switch data
+    dbg_strb_proc:  dbg(14) <= sw_new;              -- monitor new data strobe
     
 
     --=============================================================================================
@@ -119,7 +120,6 @@ begin
     --  DEBUG LOGIC PROCESSES
     --=============================================================================================
     -- connect the debug vector outputs
-    strb_o_proc: strb_o <= sw_new;              -- connect strobe debug out
     dbg_o_proc: dbg_o <= dbg;                   -- drive the logic analyzer port
     
 end rtl;
