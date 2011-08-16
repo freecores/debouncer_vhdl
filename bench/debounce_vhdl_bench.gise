@@ -104,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1313109035" xil_pn:in_ck="-726592440621834462" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3901394755573216894" xil_pn:start_ts="1313109027">
+    <transform xil_pn:end_ts="1313461503" xil_pn:in_ck="-726592440621834462" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-3901394755573216894" xil_pn:start_ts="1313461494">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -126,7 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1313109087" xil_pn:in_ck="1959554578214568806" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7550009954124855948" xil_pn:start_ts="1313109084">
+    <transform xil_pn:end_ts="1313461517" xil_pn:in_ck="1959554578214568806" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7550009954124855948" xil_pn:start_ts="1313461512">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -135,11 +135,9 @@
       <outfile xil_pn:name="debounce_atlys_top.ngd"/>
       <outfile xil_pn:name="debounce_atlys_top_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1313109105" xil_pn:in_ck="1959554578214568807" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-1658770934691434356" xil_pn:start_ts="1313109087">
+    <transform xil_pn:end_ts="1313461537" xil_pn:in_ck="1959554578214568807" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-1658770934691434356" xil_pn:start_ts="1313461517">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="debounce_atlys_top.pcf"/>
       <outfile xil_pn:name="debounce_atlys_top_map.map"/>
@@ -151,7 +149,7 @@
       <outfile xil_pn:name="debounce_atlys_top_summary.xml"/>
       <outfile xil_pn:name="debounce_atlys_top_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1313109122" xil_pn:in_ck="-6999964895445881344" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7846039340612803429" xil_pn:start_ts="1313109105">
+    <transform xil_pn:end_ts="1313461555" xil_pn:in_ck="-6999964895445881344" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="7846039340612803429" xil_pn:start_ts="1313461537">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -166,7 +164,7 @@
       <outfile xil_pn:name="debounce_atlys_top_pad.txt"/>
       <outfile xil_pn:name="debounce_atlys_top_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1313109138" xil_pn:in_ck="-1280993813019831418" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="7135157351517842893" xil_pn:start_ts="1313109122">
+    <transform xil_pn:end_ts="1313461578" xil_pn:in_ck="-1280993813019831418" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="7135157351517842893" xil_pn:start_ts="1313461562">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -178,7 +176,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1313109122" xil_pn:in_ck="1959554578214568675" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1313109115">
+    <transform xil_pn:end_ts="1313461555" xil_pn:in_ck="1959554578214568675" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1313461548">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

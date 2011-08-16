@@ -1,7 +1,7 @@
 Release 13.1 par O.40d (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-DEVELOP-W7::  Thu Aug 11 21:31:46 2011
+DEVELOP-W7::  Mon Aug 15 23:25:39 2011
 
 par -w -intstyle ise -ol high -xe n -mt 4 debounce_atlys_top_map.ncd
 debounce_atlys_top.ncd debounce_atlys_top.pcf 
@@ -160,9 +160,9 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 8 secs 
-Total CPU time to PAR completion: 8 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  259 MB
+Peak Memory Usage:  261 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

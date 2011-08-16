@@ -8,6 +8,7 @@
 -- Target Devices:  Spartan-6 LX45
 -- Tool versions:   ISE 13.1
 -- Description: 
+--
 --          This is a verification project for the Digilent Atlys board, to test the GRP_DEBOUNCE core.
 --          It uses the board's 100MHz clock input, and clocks all sequential logic at this clock.
 --
@@ -15,20 +16,10 @@
 --          The test circuit uses the VHDCI connector on the Atlys to implement a 16-pin debug port to be used
 --          with a Tektronix MSO2014. The 16 debug pins are brought to 2 8x2 headers that form a umbilical
 --          digital pod port.
+--          If you want details of the testing circuit, send me an e-mail: jdoin@opencores.org
 --
 ------------------------------ REVISION HISTORY -----------------------------------------------------------------------
 --
--- 2011/07/02   v0.01.0010  [JD]    implemented a wire-through from switches to LEDs, just to test the toolchain. It worked!
--- 2011/07/03   v0.01.0020  [JD]    added clock input, and a simple LED blinker for each LED. 
--- 2011/07/03   v0.01.0030  [JD]    added clear input, and instantiated a SPI_MASTER from my OpenCores project. 
--- 2011/07/04   v0.01.0040  [JD]    changed all clocks to clock enables, and use the 100MHz board gclk_i to clock all registers.
---                                  this change made the design go up to 288MHz, after synthesis.
--- 2011/07/07   v0.03.0050  [JD]    implemented a 16pin umbilical port for the MSO2014 in the Atlys VmodBB board, and moved all
---                                  external monitoring pins to the VHDCI ports.
--- 2011/07/10   v1.10.0075  [JD]    verified spi_master_slave at 50MHz, 25MHz, 16.666MHz, 12.5MHz, 10MHz, 8.333MHz, 7.1428MHz, 
---                                  6.25MHz, 1MHz and 500kHz 
--- 2011/07/29   v1.12.0105  [JD]    spi_master.vhd and spi_slave_vhd changed to fix CPHA='1' bug.
--- 2011/08/02   v1.13.0110  [JD]    testbed for continuous transfer in FPGA hardware.
 -- 2011/08/10   v1.01.0025  [JD]    changed to test the grp_debouncer.vhd module alone.
 -- 2011/08/11   v1.01.0026  [JD]    reduced switch inputs to 7, to save digital pins to the strobe signal.
 --
@@ -40,13 +31,13 @@ use ieee.std_logic_arith.all;
 
 entity debounce_atlys_top is
     Port (
-        gclk_i : in std_logic := 'X';                           -- board clock input 100MHz
+        gclk_i : in std_logic := 'X';               -- board clock input 100MHz
         --- input slide switches ---            
-        sw_i : in std_logic_vector (6 downto 0);                -- 7 input slide switches
+        sw_i : in std_logic_vector (6 downto 0);    -- 7 input slide switches
         --- output LEDs ----            
-        led_o : out std_logic_vector (6 downto 0);              -- 7 output leds
+        led_o : out std_logic_vector (6 downto 0);  -- 7 output leds
         --- debug outputs ---
-        dbg_o : out std_logic_vector (15 downto 0)              -- 16 generic debug pins
+        dbg_o : out std_logic_vector (15 downto 0)  -- 16 generic debug pins
     );                      
 end debounce_atlys_top;
 
@@ -78,10 +69,10 @@ begin
     Inst_sw_debouncer: entity work.grp_debouncer(rtl)
         generic map (N => N, CNT_VAL => CNT_VAL)
         port map(  
-            clk_i => gclk_i,                    -- system clock
-            data_i => sw_i,                     -- noisy input data
-            data_o => sw_data,                  -- registered stable output data
-            strb_o => sw_new                    -- transition detection
+            clk_i => gclk_i,                        -- system clock
+            data_i => sw_i,                         -- noisy input data
+            data_o => sw_data,                      -- registered stable output data
+            strb_o => sw_new                        -- transition detection
         );
 
     --=============================================================================================
@@ -92,8 +83,8 @@ begin
     begin
         -- transfer switch data when new switch is detected
         if gclk_i'event and gclk_i = '1' then
-            if sw_new = '1' then                -- clock enable
-                sw_reg <= sw_data;              -- only provide local reset for the state registers
+            if sw_new = '1' then                    -- clock enable
+                sw_reg <= sw_data;                  -- only provide local reset for the state registers
             end if;
         end if;
     end process dat_reg_proc;
@@ -102,7 +93,7 @@ begin
     --  COMBINATORIAL LOGIC PROCESSES
     --=============================================================================================
     -- LED register update
-    leds_reg_proc: leds_reg <= sw_reg;          -- leds register is a copy of the updated switch register
+    leds_reg_proc: leds_reg <= sw_reg;              -- leds register is a copy of the updated switch register
 
     -- update debug register
     dbg_in_proc:    dbg(6 downto 0) <= sw_i;        -- lower debug port has direct switch connections
